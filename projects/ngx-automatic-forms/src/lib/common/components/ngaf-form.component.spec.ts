@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NgxAutomaticFormComponent } from './ngx-automatic-form.component';
+import { NgafFormComponent } from './ngaf-form.component';
 
-describe('NgxAutomaticFormComponent', () => {
-  let component: NgxAutomaticFormComponent;
-  let fixture: ComponentFixture<NgxAutomaticFormComponent>;
+describe('NgafFormComponent', () => {
+  let component: NgafFormComponent;
+  let fixture: ComponentFixture<NgafFormComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NgxAutomaticFormComponent ]
+      declarations: [ NgafFormComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NgxAutomaticFormComponent);
+    fixture = TestBed.createComponent(NgafFormComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
