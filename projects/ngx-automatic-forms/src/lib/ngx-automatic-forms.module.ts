@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
-import { NgxAutomaticFormsComponent } from './ngx-automatic-forms.component';
+import { NgxAutomaticFormComponent } from './common/components/ngx-automatic-form.component';
 
 @NgModule({
-  declarations: [NgxAutomaticFormsComponent],
+  declarations: [NgxAutomaticFormComponent],
   imports: [
   ],
-  exports: [NgxAutomaticFormsComponent]
+  exports: [NgxAutomaticFormComponent]
 })
 export class NgxAutomaticFormsModule { }
