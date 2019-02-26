@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'ngaf-ngx-automatic-forms-lib',
+  selector: 'ngaf-ngx-automatic-forms',
   template: `
     <p>
-      ngx-automatic-forms-lib works!
+      ngx-automatic-forms works!
     </p>
   `,
   styles: []
 })
-export class NgxAutomaticFormsLibComponent implements OnInit {
+export class NgxAutomaticFormsComponent implements OnInit {
 
   constructor() { }
 

@@ -17,11 +17,11 @@
       "dom"
     ],
     "paths": {
-      "ngx-automatic-forms-lib": [
-        "dist/ngx-automatic-forms-lib"
+      "ngx-automatic-forms": [
+        "dist/ngx-automatic-forms"
       ],
-      "ngx-automatic-forms-lib/*": [
-        "dist/ngx-automatic-forms-lib/*"
+      "ngx-automatic-forms/*": [
+        "dist/ngx-automatic-forms/*"
       ]
     }
   }

@@ -16,7 +16,7 @@ module.exports = function (config) {
       clearContext: false // leave Jasmine Spec Runner output visible in browser
     },
     coverageIstanbulReporter: {
-      dir: require('path').join(__dirname, '../../coverage/ngx-automatic-forms-lib'),
+      dir: require('path').join(__dirname, '../../coverage/ngx-automatic-forms'),
       reports: ['html', 'lcovonly'],
       fixWebpackSourcePaths: true
     },

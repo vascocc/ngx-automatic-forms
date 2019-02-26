@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ngx-automatic-forms": {
+    "ngx-automatic-forms-app": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ngx-automatic-forms",
+            "outputPath": "dist/ngx-automatic-forms-app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -50,18 +50,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ngx-automatic-forms:build"
+            "browserTarget": "ngx-automatic-forms-app:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "ngx-automatic-forms:build:production"
+              "browserTarget": "ngx-automatic-forms-app:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ngx-automatic-forms:build"
+            "browserTarget": "ngx-automatic-forms-app:build"
           }
         },
         "test": {
@@ -95,7 +95,7 @@
         }
       }
     },
-    "ngx-automatic-forms-e2e": {
+    "ngx-automatic-forms-app-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -107,7 +107,7 @@
           },
           "configurations": {
             "production": {
-              "devServerTarget": "ngx-automatic-forms:serve:production"
+              "devServerTarget": "ngx-automatic-forms-app:serve:production"
             }
           }
         },
@@ -122,33 +122,33 @@
         }
       }
     },
-    "ngx-automatic-forms-lib": {
-      "root": "projects/ngx-automatic-forms-lib",
-      "sourceRoot": "projects/ngx-automatic-forms-lib/src",
+    "ngx-automatic-forms": {
+      "root": "projects/ngx-automatic-forms",
+      "sourceRoot": "projects/ngx-automatic-forms/src",
       "projectType": "library",
       "prefix": "ngaf",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
-            "tsConfig": "projects/ngx-automatic-forms-lib/tsconfig.lib.json",
-            "project": "projects/ngx-automatic-forms-lib/ng-package.json"
+            "tsConfig": "projects/ngx-automatic-forms/tsconfig.lib.json",
+            "project": "projects/ngx-automatic-forms/ng-package.json"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/ngx-automatic-forms-lib/src/test.ts",
-            "tsConfig": "projects/ngx-automatic-forms-lib/tsconfig.spec.json",
-            "karmaConfig": "projects/ngx-automatic-forms-lib/karma.conf.js"
+            "main": "projects/ngx-automatic-forms/src/test.ts",
+            "tsConfig": "projects/ngx-automatic-forms/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-automatic-forms/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/ngx-automatic-forms-lib/tsconfig.lib.json",
-              "projects/ngx-automatic-forms-lib/tsconfig.spec.json"
+              "projects/ngx-automatic-forms/tsconfig.lib.json",
+              "projects/ngx-automatic-forms/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -158,5 +158,5 @@
       }
     }
   },
-  "defaultProject": "ngx-automatic-forms"
+  "defaultProject": "ngx-automatic-forms-app"
 }
