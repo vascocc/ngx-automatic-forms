@@ -15,6 +15,14 @@
     "lib": [
       "es2017",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ngx-automatic-forms-lib": [
+        "dist/ngx-automatic-forms-lib"
+      ],
+      "ngx-automatic-forms-lib/*": [
+        "dist/ngx-automatic-forms-lib/*"
+      ]
+    }
   }
 }

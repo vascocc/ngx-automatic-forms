@@ -121,6 +121,41 @@
           }
         }
       }
+    },
+    "ngx-automatic-forms-lib": {
+      "root": "projects/ngx-automatic-forms-lib",
+      "sourceRoot": "projects/ngx-automatic-forms-lib/src",
+      "projectType": "library",
+      "prefix": "ngaf",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ngx-automatic-forms-lib/tsconfig.lib.json",
+            "project": "projects/ngx-automatic-forms-lib/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-automatic-forms-lib/src/test.ts",
+            "tsConfig": "projects/ngx-automatic-forms-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-automatic-forms-lib/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-automatic-forms-lib/tsconfig.lib.json",
+              "projects/ngx-automatic-forms-lib/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "ngx-automatic-forms"
