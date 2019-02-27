@@ -1,1 +1,10 @@
-NgxAutomaticForm
+<form [formGroup]="formGroup" (ngSubmit)="submit(formGroup)" >
+  <ng-container *ngFor="let field of form.fields">
+    <ngaf-form-field [field]="field" [formGroup]="formGroup"></ngaf-form-field>
+  </ng-container>
+  <div *ngFor="let group of form.groups">
+    <ngaf-form-group [group]="group" [form]="formGroup"></ngaf-form-group>
+  </div>
+  <button *ngIf="form.hasSubmit" type="submit" [disabled]="formGroup.invalid">SUBMIT</button>
+  <button *ngIf="form.hasReset" type="button" (click)="reset()">RESET</button>
+</form>

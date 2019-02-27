@@ -1,0 +1,24 @@
+{{field.name}}
+<ng-container [ngSwitch]="field.type">
+  <input  *ngSwitchCase="'number'"
+          type="number"
+          [formControl]="formControlObject"
+          [attr.min]="hasValidatorType('min') ? getValidatorTypeValue('min') : null"
+          [attr.max]="hasValidatorType('max') ? getValidatorTypeValue('max') : null"
+          (blur)="checkValidation()">
+  <input *ngSwitchCase="'text'"
+         type="text"
+         [formControl]="formControlObject"
+         (blur)="checkValidation()">
+  <input *ngSwitchCase="'email'"
+         type="email"
+         [formControl]="formControlObject"
+         (blur)="checkValidation()">
+  <input *ngSwitchCase="'password'"
+         type="password"
+         [formControl]="formControlObject"
+         (blur)="checkValidation()">
+  <input *ngSwitchCase="'checkbox'"
+         type="checkbox"
+         [formControl]="formControlObject" ngDefaultControl>
+</ng-container>

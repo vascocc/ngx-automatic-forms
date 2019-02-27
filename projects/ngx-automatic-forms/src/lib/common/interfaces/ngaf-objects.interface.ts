@@ -31,3 +31,7 @@ export interface NgAFValidatorObject {
   type: 'min' | 'max' | 'required' | 'maxLength' | 'minLength';
   value?: string | number;
 }
+
+export interface NgAFFormOptionsObject {
+  lokkAndFeel: 'native' | 'ngMaterial';
+}

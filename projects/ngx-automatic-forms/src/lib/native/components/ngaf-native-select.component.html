@@ -1,0 +1,6 @@
+{{field.name}}
+<select [attr.name]="field.control"
+        [attr.multiple]="field.extras.options.multiple ? '' : null"
+        [formControl]="formControlObject">
+  <option *ngFor="let option of field.values" [ngValue]="option">{{option}}</option>
+</select>

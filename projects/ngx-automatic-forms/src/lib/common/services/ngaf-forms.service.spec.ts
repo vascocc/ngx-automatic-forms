@@ -1,12 +1,12 @@
 import { TestBed } from '@angular/core/testing';
 
-import { NgafFormsService } from './ngaf-forms.service';
+import { NgAFFormsService } from './ngaf-forms.service';
 
 describe('NgafFormsService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
-    const service: NgafFormsService = TestBed.get(NgafFormsService);
+    const service: NgAFFormsService = TestBed.get(NgAFFormsService);
     expect(service).toBeTruthy();
   });
 });
