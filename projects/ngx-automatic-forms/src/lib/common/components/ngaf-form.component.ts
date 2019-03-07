@@ -1,15 +1,14 @@
-import {AfterViewInit, ChangeDetectorRef, Component, Inject, Input, OnInit, QueryList, ViewChildren} from '@angular/core';
+import {AfterViewInit, ChangeDetectorRef, Component, Inject, Input, QueryList, ViewChildren} from '@angular/core';
 import {NgAFFormObject, NgAFFormOptionsObject} from '../interfaces/ngaf-objects.interface';
 import {FormBuilder, FormGroup} from '@angular/forms';
 import {NgAFFormGroupComponent} from './ngaf-form-group.component';
 import {NgAFFormFieldComponent} from './ngaf-form-field.component';
-import {NgAFFormsService} from '../services/ngaf-forms.service';
 
 @Component({
   selector: 'ngaf-form',
   templateUrl: './ngaf-form.component.html'
 })
-export class NgafFormComponent implements OnInit, AfterViewInit {
+export class NgafFormComponent implements AfterViewInit {
 
   @Input() form: NgAFFormObject;
   @Input() options: NgAFFormOptionsObject;
@@ -19,13 +18,9 @@ export class NgafFormComponent implements OnInit, AfterViewInit {
   formBuilder: FormBuilder;
   formGroup: FormGroup;
 
-  constructor(@Inject(FormBuilder) formBuilder: FormBuilder, private cd: ChangeDetectorRef, private ngAFFormsService: NgAFFormsService) {
+  constructor(@Inject(FormBuilder) formBuilder: FormBuilder, private cd: ChangeDetectorRef) {
     this.formBuilder = formBuilder;
     this.formGroup = this.formBuilder.group({});
-  }
-
-  ngOnInit(): void {
-    this.ngAFFormsService.initService(this.options.lokkAndFeel);
   }
 
   ngAfterViewInit(): void {

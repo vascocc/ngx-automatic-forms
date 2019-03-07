@@ -63,6 +63,20 @@ export class NgAFFieldComponent implements OnInit {
             validators = Validators.compose([validators, Validators.minLength(validator.value)]);
           }
           break;
+        case('email'):
+          if (validators === null) {
+            validators = Validators.email;
+          } else {
+            validators = Validators.compose([validators, Validators.email]);
+          }
+          break;
+        case('pattern'):
+          if (validators === null) {
+            validators = Validators.pattern(validator.value);
+          } else {
+            validators = Validators.compose([validators, Validators.pattern(validator.value)]);
+          }
+          break;
       }
     });
 

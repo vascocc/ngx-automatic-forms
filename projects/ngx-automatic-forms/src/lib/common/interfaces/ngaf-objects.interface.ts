@@ -25,13 +25,15 @@ export interface NgAFFieldObject {
   values?: Array<any>;
   value?: any;
   extras?: any;
+  hint?: string;
 }
 
 export interface NgAFValidatorObject {
-  type: 'min' | 'max' | 'required' | 'maxLength' | 'minLength';
+  type: 'min' | 'max' | 'required' | 'maxLength' | 'minLength' | 'email' |'pattern';
   value?: string | number;
+  error?: string;
 }
 
 export interface NgAFFormOptionsObject {
-  lokkAndFeel: 'native' | 'ngMaterial';
+  debug?: any;
 }

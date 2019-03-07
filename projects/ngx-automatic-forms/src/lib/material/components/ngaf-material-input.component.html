@@ -1,0 +1,11 @@
+{{field.name}}
+<mat-form-field class="example-full-width">
+  <input matInput type="{{field.type}}" [formControl]="formControlObject" >
+  <!-- TODO -->
+  <mat-hint *ngIf="field.hint">{{field.hint}}</mat-hint>
+  <ng-container *ngFor="let validator of field.validators" ngProjectAs="mat-error">
+    <mat-error *ngIf="formControlObject.hasError(validator.type) && validator.error">
+      <a [innerHTML]="validator.error"> </a>
+    </mat-error>
+  </ng-container>
+</mat-form-field>
