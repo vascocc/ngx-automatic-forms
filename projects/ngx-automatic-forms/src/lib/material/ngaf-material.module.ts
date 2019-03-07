@@ -6,21 +6,25 @@ import {NgAFFormsService} from '../common/services/ngaf-forms.service';
 import {NgAFFieldItem} from '../common/interfaces/ngaf-field.item';
 import {NgAFMaterialInputComponent} from './components/ngaf-material-input.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {ErrorStateMatcher, MatInputModule, ShowOnDirtyErrorStateMatcher} from '@angular/material';
+import {ErrorStateMatcher, MatCheckboxModule, MatInputModule, ShowOnDirtyErrorStateMatcher} from '@angular/material';
+import {NgAFMaterialCheckBoxComponent} from './components/ngaf-material-checkbox.component';
 
 @NgModule({
   declarations: [
-    NgAFMaterialInputComponent
+    NgAFMaterialInputComponent,
+    NgAFMaterialCheckBoxComponent
   ],
   entryComponents: [
-    NgAFMaterialInputComponent
+    NgAFMaterialInputComponent,
+    NgAFMaterialCheckBoxComponent
   ],
   imports: [
     CommonModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
     NgAFAutomaticFormsModule,
-    MatInputModule
+    MatInputModule,
+    MatCheckboxModule
   ],
   providers: [
     {provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher}
@@ -33,8 +37,8 @@ export class NgAFMaterialModule {
     fieldMap.set('text', new NgAFFieldItem(NgAFMaterialInputComponent));
     fieldMap.set('email', new NgAFFieldItem(NgAFMaterialInputComponent));
     fieldMap.set('password', new NgAFFieldItem(NgAFMaterialInputComponent));
-    /*fieldMap.set('checkbox', new NgAFFieldItem(NgAFNativeInputComponent));
-    fieldMap.set('select', new NgAFFieldItem(NgAFNativeSelectComponent));*/
+    fieldMap.set('checkbox', new NgAFFieldItem(NgAFMaterialCheckBoxComponent));
+    // fieldMap.set('select', new NgAFFieldItem(NgAFNativeSelectComponent));
 
     this.ngafFormsService.setFieldMap(fieldMap);
   }

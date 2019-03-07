@@ -52,6 +52,12 @@ export class AppComponent {
         ]
       },
       {
+        name: 'This is a checkbox',
+        control: 'root_checkbox',
+        hint: 'Check this hint',
+        type: 'checkbox'
+      },
+      {
         name: 'Email',
         control: 'email_field',
         type: 'email',
