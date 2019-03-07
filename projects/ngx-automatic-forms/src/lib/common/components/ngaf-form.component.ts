@@ -28,7 +28,7 @@ export class NgafFormComponent implements AfterViewInit {
   }
 
   reset() {
-    // this.fields.forEach(field => field.reset());
+    this.fields.forEach(field => field.reset());
     this.groups.forEach(group => group.reset());
   }
 

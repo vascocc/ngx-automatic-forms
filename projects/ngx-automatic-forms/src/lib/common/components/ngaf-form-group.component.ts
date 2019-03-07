@@ -32,7 +32,7 @@ export class NgAFFormGroupComponent implements OnInit {
   }
 
   reset() {
-    // this.fields.forEach(field => field.reset());
+    this.fields.forEach(field => field.reset());
     this.groups.forEach(group => group.reset());
   }
 }

@@ -1,11 +1,9 @@
-import {Component, ComponentFactoryResolver, Input, OnInit, Type, ViewChild} from '@angular/core';
+import {Component, ComponentFactoryResolver, Input, OnInit, ViewChild} from '@angular/core';
 import {FormControl, FormGroup} from '@angular/forms';
 import {NgAFFieldObject} from '../interfaces/ngaf-objects.interface';
 import {NgAFFormsService} from '../services/ngaf-forms.service';
 import {NgAFFieldComponent} from './ngaf-field.component';
 import {NgAFDynamicFieldDirective} from '../directives/ngaf-dynamic-field.directive';
-import {NgAFNativeInputComponent} from '../../native/components/ngaf-native-input.component';
-import {NgAFFieldItem} from '../interfaces/ngaf-field.item';
 
 @Component({
   selector: 'ngaf-form-field',
