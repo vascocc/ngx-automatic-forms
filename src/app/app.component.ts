@@ -83,7 +83,7 @@ export class AppComponent {
           }
         ]
       }
-    ]/*,
+    ],
     groups: [
       {
         name: 'Group 1',
@@ -125,7 +125,7 @@ export class AppComponent {
               }
             ]
           }
-        ],
+        ]/*,
         groups: [
           {
             name: 'Group 1.1',
@@ -160,9 +160,9 @@ export class AppComponent {
               }
             ]
           }
-        ]
+        ]*/
       }
-    ]*/
+    ]
   };
 
   constructor() {
