@@ -1,0 +1,21 @@
+// @import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+
+// Overriding Material Typography
+@import '~@angular/material/theming';
+
+$typography-configuration: mat-typography-config(
+  $font-family: 'Open Sans, sans-serif'
+);
+@include mat-core($typography-configuration);
+
+
+//Variables
+/*$break-small: 320px;
+$break-large: 1200px;*/
+
+@import './base.scss';
+@import './app-component.scss';
+
+

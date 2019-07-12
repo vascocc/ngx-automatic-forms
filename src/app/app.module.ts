@@ -13,7 +13,7 @@ import {NgAFMaterialModule} from '../../projects/ngx-automatic-forms/src/lib/mat
   imports: [
     BrowserModule,
     NgAFAutomaticFormsModule,
-    //NgAFNativeModule
+    // NgAFNativeModule
     NgAFMaterialModule
   ],
   providers: [],
