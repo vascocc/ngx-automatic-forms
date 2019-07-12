@@ -1,11 +1,24 @@
 $break-small: 600px;
 $break-large: 1200px;
 
+$app-color-grey: #4a4a4a;
+
+.TopBar {
+  height: 7vh;
+  box-shadow: 1px -11px 9px 17px rgba(201,201,201,1);
+  display: grid;
+  background: $app-color-grey;
+
+  .App__title {
+    padding: 1vh;
+    color: white;
+    @extend h2;
+  }
+}
+
 .Content__grid-2 {
   display: grid;
   grid-template-columns: 2fr 2fr;
-  height: 100%;
-  background: aquamarine;
 
   @media screen and (max-width: $break-small) {
     grid-template-columns: 1fr;
