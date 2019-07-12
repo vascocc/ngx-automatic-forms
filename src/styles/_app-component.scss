@@ -3,4 +3,20 @@
   grid-template-columns: 1fr 3fr;
   height: 100%;
   background: aquamarine;
+
+  .Content__grid-cell {
+    padding: 2vh;
+
+    form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      ngaf-form-field, ngaf-form-group {
+        grid-area: span 1/ span 2;
+      }
+      ngaf-form-group a {
+        @extend h3;
+      }
+    }
+  }
 }
