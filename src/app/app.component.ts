@@ -3,8 +3,7 @@ import {NgAFFormObject} from '../../projects/ngx-automatic-forms/src/lib/common/
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  templateUrl: './app.component.html'
 })
 export class AppComponent {
   selectValues = ['1', '2', '3'];
