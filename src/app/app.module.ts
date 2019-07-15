@@ -5,6 +5,7 @@ import {AppComponent} from './app.component';
 import {NgAFAutomaticFormsModule} from '../../projects/ngx-automatic-forms/src/lib/ngaf-automatic-forms.module';
 import {NgAFNativeModule} from '../../projects/ngx-automatic-forms/src/lib/native/ngaf-native.module';
 import {NgAFMaterialModule} from '../../projects/ngx-automatic-forms/src/lib/material/ngaf-material.module';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import {NgAFMaterialModule} from '../../projects/ngx-automatic-forms/src/lib/mat
     BrowserModule,
     NgAFAutomaticFormsModule,
     // NgAFNativeModule
-    NgAFMaterialModule
+    NgAFMaterialModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
