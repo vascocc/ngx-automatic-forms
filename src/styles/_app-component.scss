@@ -19,16 +19,24 @@ $app-color-grey: #4a4a4a;
 .Content__grid-2 {
   display: grid;
   grid-template-columns: 2fr 2fr;
+  height: 100%;
 
   @media screen and (max-width: $break-small) {
     grid-template-columns: 1fr;
   }
   @media screen and (min-width: $break-large) {
-    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
   .Content__grid-cell {
     padding: 2vh;
+    display: flex;
+    flex-direction: column;
+
+    textarea {
+      width: 100%;
+      height: 100%;
+    }
 
     form {
       display: grid;

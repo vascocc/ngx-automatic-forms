@@ -1,4 +1,4 @@
-import {AfterViewInit, ChangeDetectorRef, Component, Inject, Input, QueryList, ViewChildren} from '@angular/core';
+import {AfterViewInit, ChangeDetectorRef, Component, EventEmitter, Inject, Input, Output, QueryList, ViewChildren} from '@angular/core';
 import {NgAFFormObject, NgAFFormOptionsObject} from '../interfaces/ngaf-objects.interface';
 import {FormBuilder, FormGroup} from '@angular/forms';
 import {NgAFFormGroupComponent} from './ngaf-form-group.component';
@@ -12,6 +12,7 @@ export class NgafFormComponent implements AfterViewInit {
 
   @Input() form: NgAFFormObject;
   @Input() options: NgAFFormOptionsObject;
+  @Output() submission = new EventEmitter();
   @ViewChildren(NgAFFormFieldComponent) fields: QueryList<NgAFFormFieldComponent>;
   @ViewChildren(NgAFFormGroupComponent) groups: QueryList<NgAFFormGroupComponent>;
 
@@ -34,6 +35,6 @@ export class NgafFormComponent implements AfterViewInit {
 
   submit(formGroup: FormGroup) {
     console.log(formGroup.value);
+    this.submission.emit(formGroup.value);
   }
-
 }

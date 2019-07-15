@@ -1,4 +1,4 @@
-import {Component, Type} from '@angular/core';
+import {ChangeDetectorRef, Component, Type} from '@angular/core';
 import {NgAFFormObject} from '../../projects/ngx-automatic-forms/src/lib/common/interfaces/ngaf-objects.interface';
 
 @Component({
@@ -6,12 +6,13 @@ import {NgAFFormObject} from '../../projects/ngx-automatic-forms/src/lib/common/
   templateUrl: './app.component.html'
 })
 export class AppComponent {
-  selectValues = ['1', '2', '3'];
 
   options = {
   };
 
-  formObject: NgAFFormObject = {
+  jsonResult = '';
+
+  formObject = {
     name: 'Test Form',
     hasSubmit: true,
     hasReset: true,
@@ -130,46 +131,22 @@ export class AppComponent {
               }
             ]
           }
-        ]/*,
-        groups: [
-          {
-            name: 'Group 1.1',
-            control: 'group_1_1',
-            fields: [
-              {
-                name: 'Toggle',
-                control: 'toggle_1_1',
-                type: 'checkbox'
-              },
-              {
-                name: 'Single Select',
-                control: 'single_select_1_1',
-                type: 'select',
-                value: 3,
-                values: this.selectValues,
-                extras: {
-                  options: {multiple: false},
-                  startEmpty: true
-                }
-              },
-              {
-                name: 'Multi Select',
-                control: 'multi_select_1_1',
-                type: 'select',
-                value: [ '1', '3'],
-                values: this.selectValues,
-                extras: {
-                  options: {multiple: true},
-                  startEmpty: false
-                }
-              }
-            ]
-          }
-        ]*/
+        ]
       }
     ]
   };
 
-  constructor() {
+  jsonForm = JSON.stringify(this.formObject, null, 2);
+
+  constructor(private cdr: ChangeDetectorRef) {
+  }
+
+  onChangeJson($event) {
+    this.formObject = JSON.parse($event.target.value);
+    this.cdr.detectChanges();
+  }
+
+  onFormSubmission($event) {
+    this.jsonResult = JSON.stringify($event, null, 2);
   }
 }
